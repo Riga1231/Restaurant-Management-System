@@ -1,0 +1,33 @@
+.linear-gradient{
+	-fx-background-color: linear-gradient(to bottom left, #393351, #2F2B43);
+}
+
+.login-btn{
+	-fx-background-color: #393351;
+	-fx-text-fill: #ffffff;
+}
+.login-btn:hover{
+	-fx-text-fill: gray;
+}
+.login-btn:active{
+	-fx-text-fill: #80AFF5;
+}
+.signup-btn{
+	-fx-background-color: #D5CBEB;
+	-fx-background-radius: 5;
+	-fx-text-fill: #371897;
+	
+}
+.signup-btn:hover{
+	-fx-background-color: #E4EEFD;
+}
+.signup-btn:pressed{
+	-fx-background-color: #E4EEFD;
+	-fx-background-radius: 20;
+}
+.forgot-btn:hover{
+	-fx-text-fill: black;
+}
+.back-btn:hover{
+	-fx-fill: black;
+}

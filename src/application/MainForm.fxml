@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="691.0" prefWidth="1188.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainFormController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <left>
+            <AnchorPane prefHeight="528.0" prefWidth="88.0" style="-fx-background-color: #F2F8F4;" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="homeButton" mnemonicParsing="false" onAction="#switchPage" prefHeight="69.0" prefWidth="88.0" styleClass="nav" stylesheets="@MainForm.css" />
+                  <Button fx:id="menuButton" layoutY="70.0" mnemonicParsing="false" onAction="#switchPage" prefHeight="70.0" prefWidth="88.0" styleClass="nav" stylesheets="@MainForm.css" />
+                  <Button fx:id="inventoryButton" layoutY="140.0" mnemonicParsing="false" onAction="#switchPage" prefHeight="70.0" prefWidth="88.0" styleClass="nav" stylesheets="@MainForm.css" />
+                  <ImageView fitHeight="33.0" fitWidth="34.0" layoutX="25.0" layoutY="88.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Downloads/hd-shopping-cart-white-logo-icon-transparent-png-11640441682ecem2ohejv-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="customerButton" layoutY="210.0" mnemonicParsing="false" onAction="#switchPage" prefHeight="70.0" prefWidth="88.0" styleClass="nav" stylesheets="@MainForm.css" />
+                  <FontAwesomeIcon fill="WHITE" glyphName="GLASS" layoutX="31.0" layoutY="255.0" size="25" text="" />
+                  <FontAwesomeIcon fill="WHITE" glyphName="LIST" layoutX="32.0" layoutY="184.0" size="25" />
+                  <FontAwesomeIcon fill="WHITE" glyphName="HOME" layoutX="33.0" layoutY="45.0" size="25" text="" />
+                  <Button fx:id="logout" layoutX="-2.0" layoutY="529.0" mnemonicParsing="false" onAction="#logout" prefHeight="26.0" prefWidth="88.0" stylesheets="@MainForm.css" text="Log Out">
+                     <graphic>
+                        <FontAwesomeIcon />
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </left>
+         <top>
+            <AnchorPane prefHeight="121.0" prefWidth="1082.0" style="-fx-background-color: #393351;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="67.0" fitWidth="70.0" layoutX="45.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Downloads/clipart-restaurant-restaurant-logo-13-removebg-preview%20(1).png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="158.0" layoutY="43.0" text="BusinessName" textFill="#c4c2c2">
+                     <font>
+                        <Font name="Book Antiqua" size="29.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIcon fill="WHITE" glyphName="USER" layoutX="994.0" layoutY="69.0" size="25" />
+                  <Label fx:id="usernameLabel" layoutX="1036.0" layoutY="53.0" text="Username" textFill="#c7c5c5" />
+               </children></AnchorPane>
+         </top>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <StackPane layoutX="44.0" layoutY="96.0" prefHeight="528.0" prefWidth="946.4" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #E0E4E1;">
+                           <children>
+                              <AnchorPane fx:id="homePage" layoutX="14.0" layoutY="51.0" prefHeight="516.0" prefWidth="994.4" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <AnchorPane fx:id="NOC" layoutX="29.0" layoutY="47.0" prefHeight="146.0" prefWidth="259.0" style="-fx-background-color: #F2F8F4;">
+                                       <children>
+                                          <Label layoutX="55.0" layoutY="20.0" text="NUMBER OF CUSTOMERS" textFill="#b1abab">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="numOfCustomers" layoutX="117.0" layoutY="38.0" text="0" textFill="#b1abab">
+                                             <font>
+                                                <Font size="47.0" />
+                                             </font>
+                                          </Label>
+                                          <FontAwesomeIcon fill="WHITE" glyphName="GLASS" layoutX="32.0" layoutY="88.0" selectionFill="#844141" size="25" text="" />
+                                          <FontAwesomeIcon fill="#945656" glyphName="GLASS" layoutX="32.0" layoutY="83.0" size="25" text="" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane fx:id="IT" layoutX="374.0" layoutY="47.0" prefHeight="146.0" prefWidth="259.0" style="-fx-background-color: #F2F8F4;">
+                                       <children>
+                                          <Label layoutX="84.0" layoutY="20.0" text="INCOME TODAY" textFill="#b1abab">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="incomeToday" layoutX="117.0" layoutY="38.0" text="0" textFill="#b1abab">
+                                             <font>
+                                                <Font size="47.0" />
+                                             </font>
+                                          </Label>
+                                          <FontAwesomeIcon fill="#64cf77" glyphName="MONEY" layoutX="39.0" layoutY="81.0" size="25" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane fx:id="NOSP" layoutX="719.0" layoutY="47.0" prefHeight="146.0" prefWidth="259.0" style="-fx-background-color: #F2F8F4;">
+                                       <children>
+                                          <Label layoutX="44.0" layoutY="20.0" text="NUMBER OF SOLD PRODUCTS" textFill="#b1abab">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="numOfSoldProduct" layoutX="117.0" layoutY="38.0" text="0" textFill="#b1abab">
+                                             <font>
+                                                <Font size="47.0" />
+                                             </font>
+                                          </Label>
+                                          <FontAwesomeIcon fill="#c1d12b" glyphName="GLASS" layoutX="44.0" layoutY="81.0" selectionFill="#f0f727" size="25" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AreaChart fx:id="incomeChart" layoutX="373.0" layoutY="285.0" prefHeight="232.0" prefWidth="259.0">
+                                      <xAxis>
+                                        <CategoryAxis side="BOTTOM" />
+                                      </xAxis>
+                                      <yAxis>
+                                        <NumberAxis side="LEFT" />
+                                      </yAxis>
+                                    </AreaChart>
+                                    <BarChart fx:id="customerChart" layoutX="27.0" layoutY="285.0" prefHeight="234.0" prefWidth="259.0">
+                                      <xAxis>
+                                        <CategoryAxis side="BOTTOM" />
+                                      </xAxis>
+                                      <yAxis>
+                                        <NumberAxis side="LEFT" />
+                                      </yAxis>
+                                    </BarChart>
+                                    <AnchorPane layoutX="28.0" layoutY="230.0" prefHeight="46.0" prefWidth="260.0" style="-fx-background-color: #F2F8F4;">
+                                       <children>
+                                          <FontAwesomeIcon fill="#2160b1" glyphName="LIST" layoutX="14.0" layoutY="32.0" size="25" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="373.0" layoutY="230.0" prefHeight="45.0" prefWidth="259.0" style="-fx-background-color: #F2F8F4;">
+                                       <children>
+                                          <FontAwesomeIcon fill="#2160b1" glyphName="LIST" layoutX="19.0" layoutY="32.0" size="25" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="719.0" layoutY="230.0" prefHeight="45.0" prefWidth="259.0" style="-fx-background-color: #F2F8F4;">
+                                       <children>
+                                          <FontAwesomeIcon fill="#2160b1" glyphName="LIST" layoutX="14.0" layoutY="31.0" size="25" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane fx:id="TI" layoutX="719.0" layoutY="299.0" prefHeight="146.0" prefWidth="259.0" style="-fx-background-color: #F2F8F4;">
+                                       <children>
+                                          <Label layoutX="85.0" layoutY="14.0" text="TOTAL INCOME" textFill="#b1abab">
+                                             <font>
+                                                <Font name="System Bold" size="12.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="totalIncome" layoutX="91.0" layoutY="38.0" text="0" textFill="#b1abab">
+                                             <font>
+                                                <Font size="47.0" />
+                                             </font>
+                                          </Label>
+                                          <FontAwesomeIcon fill="#ac3991" glyphName="SQUARE" layoutX="44.0" layoutY="83.0" size="25" text="" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="menuPage" prefHeight="569.6" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <AnchorPane fx:id="inventorySide" layoutX="758.0" layoutY="-1.0" prefHeight="570.0" prefWidth="340.0" style="-fx-background-color: #F2F8F4;">
+                                       <children>
+                                          <TableView fx:id="menuTableView" layoutX="29.0" layoutY="25.0" onMouseClicked="#menuSelectOrder" prefHeight="353.0" prefWidth="290.0">
+                                            <columns>
+                                              <TableColumn fx:id="menuNameColumn" prefWidth="133.5999755859375" text="ProductName" />
+                                              <TableColumn fx:id="menuQuantityColumn" prefWidth="81.60003662109375" text="Quantity" />
+                                                <TableColumn fx:id="menuPriceColumn" prefWidth="72.800048828125" text="Price" />
+                                            </columns>
+                                          </TableView>
+                                          <Label fx:id="menuTotal" layoutX="90.0" layoutY="396.0" prefHeight="18.0" prefWidth="86.0" text="Total: " textFill="#666060" />
+                                          <Label layoutX="90.0" layoutY="419.0" prefHeight="18.0" prefWidth="57.0" text="Amount: " textFill="#666060" />
+                                          <Label fx:id="changeLabel" layoutX="90.0" layoutY="451.0" prefHeight="18.0" prefWidth="86.0" text="Change: " textFill="#666060" />
+                                          <Button fx:id="menuPayButton" layoutX="48.0" layoutY="482.0" mnemonicParsing="false" onAction="#menuPay" prefHeight="26.0" prefWidth="252.0" text="PAY" />
+                                          <Button fx:id="removeButton" layoutX="66.0" layoutY="521.0" mnemonicParsing="false" onAction="#menuRemove" prefHeight="26.0" prefWidth="86.0" text="REMOVE" />
+                                          <Button fx:id="receiptButton" layoutX="197.0" layoutY="521.0" mnemonicParsing="false" onAction="#receipt" prefHeight="26.0" prefWidth="86.0" text="RECEIPT" />
+                                          <TextField fx:id="amountField" layoutX="148.0" layoutY="415.0" onAction="#menuAmount" prefHeight="26.0" prefWidth="135.0" />
+                                       </children>
+                                    </AnchorPane>
+                                    <ScrollPane fx:id="MealPane" layoutX="34.0" layoutY="57.0" prefHeight="498.0" prefWidth="700.0">
+                                      <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="696.0">
+                                             <children>
+                                                <GridPane fx:id="Meals">
+                                                  <columnConstraints>
+                                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                  </columnConstraints>
+                                                </GridPane>
+                                             </children>
+                                          </AnchorPane>
+                                      </content>
+                                    </ScrollPane>
+                                    <ScrollPane fx:id="DrinkPane" layoutX="34.0" layoutY="57.0" prefHeight="498.0" prefWidth="700.0" visible="false">
+                                      <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="696.0">
+                                             <children>
+                                                <GridPane fx:id="Drinks">
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                   </columnConstraints>
+                                                </GridPane>
+                                             </children>
+                                          </AnchorPane>
+                                      </content>
+                                    </ScrollPane>
+                                    <ScrollPane fx:id="DessertPane" layoutX="34.0" layoutY="57.0" prefHeight="498.0" prefWidth="700.0" visible="false">
+                                      <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="696.0">
+                                             <children>
+                                                <GridPane fx:id="Desserts">
+                                                   <columnConstraints>
+                                                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                   </columnConstraints>
+                                                </GridPane>
+                                             </children>
+                                          </AnchorPane>
+                                      </content>
+                                    </ScrollPane>
+                                    <Button fx:id="mealButton" layoutX="187.0" layoutY="14.0" mnemonicParsing="false" onAction="#changeGrid" prefHeight="26.0" prefWidth="73.0" stylesheets="@MainForm.css" text="Meal" />
+                                    <Button fx:id="dessertButton" layoutX="429.0" layoutY="14.0" mnemonicParsing="false" onAction="#changeGrid" prefHeight="26.0" prefWidth="68.0" stylesheets="@MainForm.css" text="Dessert" />
+                                    <Button fx:id="drinkButton" layoutX="313.0" layoutY="14.0" mnemonicParsing="false" onAction="#changeGrid" prefHeight="26.0" prefWidth="70.0" stylesheets="@MainForm.css" text="Drink" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="inventoryPage" layoutX="60.0" layoutY="27.0" prefHeight="569.6" prefWidth="1100.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <TableView fx:id="productView" layoutX="25.0" layoutY="38.0" onMouseClicked="#inventorySelectData" prefHeight="290.0" prefWidth="1054.0">
+                                      <columns>
+                                        <TableColumn fx:id="productIdColumn" prefWidth="122.39999389648438" text="Product Id" />
+                                        <TableColumn fx:id="productNameColumn" prefWidth="190.39996337890625" text="Product Name" />
+                                          <TableColumn fx:id="productTypeColumn" prefWidth="109.60000610351562" text="Type" />
+                                          <TableColumn fx:id="productStockColumn" prefWidth="124.0" text="Stock" />
+                                          <TableColumn fx:id="productPriceColumn" prefWidth="136.79998779296875" text="Price" />
+                                          <TableColumn fx:id="productStatusColumn" prefWidth="179.20001220703125" text="Status" />
+                                          <TableColumn fx:id="productDateColumn" prefWidth="194.40008544921875" text="Date" />
+                                      </columns>
+                                    </TableView>
+                                    <AnchorPane fx:id="downPane" layoutX="25.0" layoutY="346.0" prefHeight="200.0" prefWidth="1052.0" style="-fx-background-color: #F2F8F4;">
+                                       <children>
+                                          <Label layoutX="352.0" layoutY="111.0" prefHeight="18.0" prefWidth="54.0" text="Status" textFill="#6e6b6b" />
+                                          <Label layoutX="40.0" layoutY="67.0" prefHeight="18.0" prefWidth="82.0" text="Product Name" textFill="#6e6b6b" />
+                                          <Label layoutX="40.0" layoutY="111.0" prefHeight="18.0" prefWidth="66.0" text="Type" textFill="#6e6b6b" />
+                                          <ComboBox fx:id="productTypeField" layoutX="135.0" layoutY="108.0" prefWidth="150.0" />
+                                          <TextField fx:id="productIdField" layoutX="135.0" layoutY="28.0" />
+                                          <TextField fx:id="productNameField" layoutX="135.0" layoutY="64.0" />
+                                          <Label layoutX="352.0" layoutY="31.0" prefHeight="18.0" prefWidth="47.0" text="Stock" textFill="#6e6b6b" />
+                                          <Label layoutX="352.0" layoutY="67.0" prefHeight="18.0" prefWidth="44.0" text="Price" textFill="#6e6b6b" />
+                                          <Label layoutX="40.0" layoutY="40.0" prefHeight="18.0" prefWidth="66.0" text="Product ID" textFill="#6e6b6b" />
+                                          <TextField fx:id="productStockField" layoutX="396.0" layoutY="28.0" />
+                                          <TextField fx:id="productPriceField" layoutX="396.0" layoutY="63.0" />
+                                          <ComboBox fx:id="productStatusField" layoutX="395.0" layoutY="107.0" prefWidth="150.0" />
+                                          <Button fx:id="productAdd" layoutX="285.0" layoutY="159.0" mnemonicParsing="false" onAction="#inventoryAdd" prefHeight="26.0" prefWidth="75.0" text="ADD" />
+                                          <Button fx:id="productUpdate" layoutX="368.0" layoutY="159.0" mnemonicParsing="false" onAction="#inventoryUpdate" prefHeight="26.0" prefWidth="75.0" text="UPDATE" />
+                                          <Button fx:id="productClear" layoutX="450.0" layoutY="159.0" mnemonicParsing="false" onAction="#inventoryClear" prefHeight="26.0" prefWidth="75.0" text="CLEAR" />
+                                          <Button fx:id="productRemove" layoutX="532.0" layoutY="159.0" mnemonicParsing="false" onAction="#inventoryDelete" prefHeight="26.0" prefWidth="75.0" text="REMOVE" />
+                                          <AnchorPane layoutX="722.0" layoutY="4.0" prefHeight="146.0" prefWidth="210.0" style="-fx-border-width: 1px; -fx-border-color: black;">
+                                             <children>
+                                                <ImageView fx:id="productImage" fitHeight="150.0" fitWidth="210.0" layoutX="-3.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true" />
+                                             </children>
+                                          </AnchorPane>
+                                          <Button fx:id="importImage" layoutX="788.0" layoutY="159.0" mnemonicParsing="false" onAction="#inventoryImport" prefHeight="26.0" prefWidth="75.0" text="IMPORT" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="customerPage" prefHeight="569.6" prefWidth="1100.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Label layoutX="36.0" layoutY="35.0" text="TRANSACTIONS" textFill="#6b6868" />
+                                    <TableView fx:id="customerView" layoutX="36.0" layoutY="78.0" prefHeight="467.0" prefWidth="1022.0">
+                                      <columns>
+                                        <TableColumn fx:id="customerIdColumn" prefWidth="246.40000915527344" text="Customer ID" />
+                                        <TableColumn fx:id="customerTotalColumn" prefWidth="299.199951171875" text="Total " />
+                                          <TableColumn fx:id="customerDateColumn" prefWidth="220.80001831054688" text="Date" />
+                                          <TableColumn fx:id="customerCashierColumn" prefWidth="257.5999450683594" text="Cashier" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                              <Label fx:id="pageLabel" prefHeight="35.0" prefWidth="173.0" text="DASHBOARD" textFill="#a93333">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Label>
+                           </children></AnchorPane>
+                     </children>
+                  </StackPane>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>
